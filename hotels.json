@@ -1,0 +1,89 @@
+[{
+  "_id": {
+    "$oid": "611a5ec3fd83bb9757804e77"
+  },
+  "location": "Cornwall",
+  "capacity": 2,
+  "cost_per_night": 180,
+  "image": "https://www.cornwall-beaches.co.uk/public/photos/kynance-cove.jpg"
+},{
+  "_id": {
+    "$oid": "611a6027fd83bb9757804e78"
+  },
+  "location": "Bristol",
+  "capacity": 4,
+  "cost_per_night": 75,
+  "image": "https://www.easyjet.com/ejcms/cache/medialibrary/Images/JSS/Destinations/Hero/UnitedKingdom_Bristol_3840x2160.jpg?mw=1920&hash=B9444FAB21E806414424F025E185FFCB9EAC41D4"
+},{
+  "_id": {
+    "$oid": "611a603afd83bb9757804e79"
+  },
+  "location": "Dubai",
+  "capacity": 10,
+  "cost_per_night": 10000,
+  "image": "https://www.travelvivi.com/wp-content/uploads/2014/12/atlantis-dubai.jpg"
+},{
+  "_id": {
+    "$oid": "611a60c6fd83bb9757804e7a"
+  },
+  "location": "Paris",
+  "capacity": 2,
+  "cost_per_night": 350,
+  "image": "https://media-cdn.tripadvisor.com/media/photo-s/15/13/64/0b/exterior-by-night.jpg"
+},{
+  "_id": {
+    "$oid": "611a60c9fd83bb9757804e7b"
+  },
+  "location": "Saskia's Bath",
+  "capacity": 1,
+  "cost_per_night": 15,
+  "image": "https://drummonds-uk.com/app/uploads/2020/01/The-Swale_1024x1024@2x-1626x1560.jpg"
+},{
+  "_id": {
+    "$oid": "611a613bfd83bb9757804e7c"
+  },
+  "location": "Sydney",
+  "capacity": 4,
+  "cost_per_night": 250,
+  "image": "https://www.traveller.com.au/content/dam/images/g/r/l/i/2/z/image.related.articleLeadwide.620x349.h1pk60.png/1595632916812.jpg"
+},{
+  "_id": {
+    "$oid": "611a613ffd83bb9757804e7d"
+  },
+  "location": "London",
+  "capacity": 2,
+  "cost_per_night": 150,
+  "image": "https://www.theritzlondon.com/wp-content/uploads/2020/09/The_Ritz_Restaurant_web.jpg"
+},{
+  "_id": {
+    "$oid": "611a61bffd83bb9757804e7e"
+  },
+  "location": "Swindon",
+  "capacity": 2,
+  "cost_per_night": 80,
+  "image": "https://cf.bstatic.com/xdata/images/hotel/270x200/143360656.jpg?k=5c0aa0567fd58233bf49ecfc6659db9aa1ca4b645ba876577224adaa42772622&o="
+},{
+  "_id": {
+    "$oid": "611a61dcfd83bb9757804e7f"
+  },
+  "location": "Bath",
+  "capacity": 3,
+  "cost_per_night": 170,
+  "image": "https://scontent.fbrs4-2.fna.fbcdn.net/v/t31.18172-8/p640x640/14883611_10157661896635321_8860279667493964261_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=e3f864&_nc_ohc=4XoIxreXB3AAX8Ft3xe&_nc_ht=scontent.fbrs4-2.fna&oh=89061ec564b9209dfa266e7af96589cc&oe=6141463D"
+},{
+  "_id": {
+    "$oid": "611a6651fd83bb9757804e80"
+  },
+  "location": "Ibiza",
+  "capacity": 2,
+  "cost_per_night": 200,
+  "image": "https://cdn.thecrazytourist.com/wp-content/uploads/2018/08/ccimage-shutterstock_585352154.jpg"
+},{
+  "_id": {
+    "$oid": "611a667efd83bb9757804e81"
+  },
+  "location": "Alicante",
+  "capacity": 6,
+  "cost_per_night": 300,
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUGB__o9sEeS8qJ3OQ9pIN5ieR2tai-Er8wA&usqp=CAU"
+}]
