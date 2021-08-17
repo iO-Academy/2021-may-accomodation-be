@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "611a8830fc2a622644ba4f58"
+  },
+  "check_in_date": {
+    "$date": "2021-12-01T00:00:00Z"
+  },
+  "check_out_date": {
+    "$date": "2021-12-03T00:00:00Z"
+  },
+  "name": "bob",
+  "email": "bob@bob.co.uk",
+  "hotel_id": "see hotels collection",
+  "no_of_adults": 1,
+  "no_of_children": 0
+},{
+  "_id": {
+    "$oid": "611bb4c57a8e76dccfeb4521"
+  },
+  "check_in_date": {
+    "$date": "2021-08-22T00:00:00Z"
+  },
+  "check_out_date": {
+    "$date": "2021-08-30T00:00:00Z"
+  },
+  "name": "lucy",
+  "email": "lucy@lucy.co.uk",
+  "hotel_id": "see hotels collection",
+  "no_of_adults": 2,
+  "no_of_children": 0
+},{
+  "_id": {
+    "$oid": "611bb4e77a8e76dccfeb4522"
+  },
+  "check_in_date": {
+    "$date": "2022-01-01T00:00:00Z"
+  },
+  "check_out_date": {
+    "$date": "2022-01-30T00:00:00Z"
+  },
+  "name": "sas",
+  "email": "sas@sas.co.uk",
+  "hotel_id": "see hotels collection",
+  "no_of_adults": 3,
+  "no_of_children": 0
+},{
+  "_id": {
+    "$oid": "611bb5167a8e76dccfeb4523"
+  },
+  "check_in_date": {
+    "$date": "2021-10-13T00:00:00Z"
+  },
+  "check_out_date": {
+    "$date": "2021-10-17T00:00:00Z"
+  },
+  "name": "ash",
+  "email": "ash@ash.co.uk",
+  "hotel_id": "see hotels collection",
+  "no_of_adults": 4,
+  "no_of_children": 0
+}]
