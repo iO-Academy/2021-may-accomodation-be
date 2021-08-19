@@ -52,7 +52,6 @@ app.post('/hotels/:id', async (request, response) => {
     const newBooking = await collection.updateOne({_id: ObjectId(request.params.id)},{$push: {bookings: {name: userName, email: userEmail, checkin: userCheckinDate, checkout: userCheckoutDate, adult_guests: userAdult_guests, child_guests: userChild_guests}}})
     const newBookedDates = await collection.updateOne({_id: ObjectId(request.params.id)},{$push: {booked: {$each: bookedDates}}})
     response.json({success: newBooking.modifiedCount === 1})
-    response.json({success: newBookedDates.modifiedCount === 1})
 })
 
 app.listen(port, () => {
