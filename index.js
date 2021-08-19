@@ -23,8 +23,8 @@ app.get('/hotels', async (request, response) => {
     const connection = await MongoClient.connect(url)
     const db = connection.db('seal')
     const collection = db.collection('hotels')
-    let start = new Date(request.query.checkin).toISOString()
-    let end = new Date(request.query.checkout).toISOString()
+    let start = new Date(request.query.checkin)
+    let end = new Date(request.query.checkout)
     const data = await collection.find({'booked':
             {$not:
                     {$in:
