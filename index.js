@@ -1,8 +1,8 @@
 const express = require('express')
-const exphbs = require('express-handlebars')
 const MongoClient = require('mongodb').MongoClient
 const ObjectId = require('mongodb').ObjectId
 const cors = require('cors')
+const validator = require('validator')
 const dateRange = require('./dateRange')
 
 const url = "mongodb://root:password@localhost:27017"
@@ -12,11 +12,6 @@ app.use(express.json())
 
 const port = 3000
 
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
-
-app.use(express.static('public'))
-
 app.use(cors())
 app.options('*', cors())
 
@@ -24,18 +19,24 @@ app.get('/hotels', async (request, response) => {
     const connection = await MongoClient.connect(url)
     const db = connection.db('seal')
     const collection = db.collection('hotels')
-    let start = new Date(request.query.checkin)
-    let end = new Date(request.query.checkout)
-    const data = await collection.find({'booked':
-            {$not:
-                    {$in:
-                            [
-                                start,
-                                end
-                            ]
-                    }
-            }}).toArray()
-    response.json(data)
+    const options = {strictMode: true, format: 'YYYY-MM-DD'}
+    let start = (validator.isDate(request.query.checkin, options)) ? new Date(request.query.checkin) : false
+    let end = (validator.isDate(request.query.checkout, options)) ? new Date(request.query.checkout) : false
+    if (start !== false && end !== false) {
+        const data = await collection.find({'booked':
+                {$not:
+                        {$in:
+                                [
+                                    start,
+                                    end
+                                ]
+                        }
+                }}).toArray()
+        response.json(data)
+    }
+    else {
+        return response.json({success: false, message: 'invalid dates'})
+    }
 })
 
 app.post('/hotels/:id', async (request, response) => {
