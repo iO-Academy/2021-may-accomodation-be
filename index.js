@@ -23,19 +23,29 @@ app.get('/hotels', async (request, response) => {
     const connection = await MongoClient.connect(url)
     const db = connection.db('seal')
     const collection = db.collection('hotels')
-
-    const data = await collection.find({}).toArray()
+    let start = new Date(request.query.checkin).toISOString()
+    let end = new Date(request.query.checkout).toISOString()
+    const data = await collection.find({'booked':
+            {$not:
+                    {$in:
+                            [
+                                start,
+                                end
+                            ]
+                    }
+            }}).toArray()
     response.json(data)
 })
 
-app.post('/booking-confirmation', async (request, response) => {
-    const connection = await MongoClient.connect(url)
-    const db = connection.db('seal')
-    const collection = db.collection('bookings')
 
-    const newBooking = await collection.insertOne({booking: request.body.booking})
-    response.json({success: newBooking.insertedId !== undefined})
-})
+// app.post('/booking-confirmation', async (request, response) => {
+//     const connection = await MongoClient.connect(url)
+//     const db = connection.db('seal')
+//     const collection = db.collection('hotels')
+//
+//     const newBooking = await collection.insertOne({booking: request.body.booking})
+//     response.json({success: newBooking.insertedId !== undefined})
+// })
 
 
 app.listen(port, () => {
